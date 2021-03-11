@@ -1,9 +1,6 @@
 export default {
   blue: {
-    base: "#19074D",
-    light: "#300d93",
-    lighter: "#4714d9",
-    dark: "#020107",
+    base: "#010D21",
   },
   purple: {
     base: "#8100B2",
@@ -18,5 +15,8 @@ export default {
   },
   cyan: {
     base: "#00F5FE",
+  },
+  white: {
+    base: "#fff",
   },
 };

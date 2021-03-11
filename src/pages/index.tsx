@@ -1,18 +1,15 @@
 import * as React from "react";
-import styled from "styled-components";
-import theme from "../styles/theme";
 import Layout from "../components/Layout";
-
-const PageStyles = styled.main`
-  background-color: ${theme.blue.base};
-`;
+import About from "../components/About";
+import Work from "../components/Work";
+import Writing from "../components/Writing";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <PageStyles>
-        <div>Hello</div>
-      </PageStyles>
+      <About />
+      <Work />
+      <Writing />
     </Layout>
   );
 };

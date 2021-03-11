@@ -1,7 +1,16 @@
-import styled, { createGlobalStyle } from "styled-components";
-import theme from "./theme";
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+
+    :root {
+        --blue-base: #010D21;
+        --pink-base: #ED017B;
+        --purple-base: #8100B2;
+        --yellow-base: #FFD237;
+        --cyan-base: #00F5FE;
+        --white-base: #fff;
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -15,24 +24,44 @@ export default createGlobalStyle`
     }
     
     body {
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-family: 'Anaheim';
-        background-color: ${theme.blue.base};
-        color: ${theme.pink.light};
+        background-color: var(--blue-base);
+        color: var(--white-base);
+        font-weight: 500;
     }
 
     a, a:visited, a:link {
         font-size: 2rem;
         color: inherit
     }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        color:var(--pink-base);
+        font-size: 3.6rem;
+        padding-bottom: 2rem;
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .cyan {
+        font-weight: bold;
+        color: var(--cyan-base);
+    }
+
+    .yellow {
+        font-weight: bold;
+        color: var(--yellow-base)
+    }
 `;
 
-export const YellowAccent = styled.span`
-  font-weight: bold;
-  color: ${theme.yellow.base};
-`;
+export const flexCenter = "display:flex;align-items:center;";
 
-export const CyanAccent = styled.span`
-  font-weight: bold;
-  color: ${theme.cyan.base};
-`;
+export const flexCenterCenter =
+  "display:flex;align-items:center;justify-content:center;";
