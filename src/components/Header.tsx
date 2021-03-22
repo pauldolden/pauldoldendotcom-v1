@@ -8,7 +8,7 @@ const PageStyles = styled.section`
   header {
     ${flexCenter};
     justify-content: space-between;
-    border-bottom: 1px solid var(--pink-base);
+    border-bottom: 1px solid var(--blue-light);
     padding: 3rem 15%;
     color: var(--pink-base);
 
