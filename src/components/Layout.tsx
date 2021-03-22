@@ -4,6 +4,7 @@ import Head from "./Head";
 // Styles
 import GlobalStyles from "../styles/globals";
 import Header from "./Header";
+import { Footer } from "./Footer";
 
 const PageWrapper = styled.section`
   display: flex;
@@ -11,7 +12,8 @@ const PageWrapper = styled.section`
   height: 100vh;
 
   main {
-    padding: 0 15%;
+    padding: 3rem 15%;
+    padding-bottom: 6rem;
     flex: 1;
   }
 `;
@@ -28,6 +30,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
       <PageWrapper>
         <Header />
         <main>{props.children}</main>
+        <Footer />
       </PageWrapper>
     </>
   );
