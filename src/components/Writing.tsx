@@ -16,7 +16,7 @@ const Writing = () => {
         <div className="text">
           Prior to persuing a career in code, I was a subpar Creative Writing
           student, so you'll occationally find me posting verbose and adverb
-          riddled takes on my life and code here 👇.
+          riddled takes on my life and code below.
         </div>
       </div>
     </PageStyles>

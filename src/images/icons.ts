@@ -12,7 +12,7 @@ import sass from "./sass.svg";
 import stycomp from "./styled-components.svg";
 import typescript from "./typescript.svg";
 import linux from "./linux.svg";
-import strapi from "./strapi.svg";
+import prismic from "./prismic.svg";
 
 export const tools = [
   { alt: "CSS", img: css },
@@ -25,9 +25,9 @@ export const tools = [
   { alt: "NextJS", img: next },
   { alt: "NodeJS", img: node },
   { alt: "PostgreSQL", img: pgsql },
+  { alt: "Prismic", img: prismic },
   { alt: "ReactJS", img: reactimg },
   { alt: "Sass", img: sass },
-  { alt: "Strapi", img: strapi },
   { alt: "Styled Components", img: stycomp },
   { alt: "TypeScript", img: typescript },
 ];

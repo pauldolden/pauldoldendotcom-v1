@@ -67,7 +67,7 @@ const PageStyles = styled.section`
 const About = () => {
   const icons = tools.map((tool) => {
     return (
-      <div className="tool-container">
+      <div key={tool.alt} className="tool-container">
         <div
           className="img-cont"
           style={{ backgroundImage: `url(${tool.img})` }}
@@ -88,9 +88,9 @@ const About = () => {
           <p>
             Hey 👋! My name is Paul Dolden, I'm a full-stack developer from
             Essex, UK. I currently work for 2Dmedia, in Witham, Essex building
-            custom E-Commerce sites. I like JavaScript and open source. I enjoy
-            dabbling with all manner of tech, but I mostly build websites with
-            these tools... (those ones, over there) 👉.
+            custom E-Commerce sites. I like JavaScript, The JAMStack and open
+            source. I enjoy dabbling with all manner of tech, but I mostly build
+            websites with these tools... (those ones, over there) 👉.
           </p>
           <p>
             On the rare occasions that I'm not writing code, I'm usually

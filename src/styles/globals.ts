@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
 
     :root {
+        --blue-light: #1B273B;
         --blue-base: #010D21;
         --pink-base: #ED017B;
         --purple-base: #8100B2;
@@ -58,6 +59,10 @@ export default createGlobalStyle`
     .yellow {
         font-weight: bold;
         color: var(--yellow-base)
+    }
+
+    p:last-child {
+        margin-bottom: 0;
     }
 `;
 
