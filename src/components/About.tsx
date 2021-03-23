@@ -104,7 +104,6 @@ const About = () => {
         about<span className="yellow">.</span>
         <span className="cyan">me</span>
       </h2>
-      text
       <div className="content">
         <div className="text">
           <p>
