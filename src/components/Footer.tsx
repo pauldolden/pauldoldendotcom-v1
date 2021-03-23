@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterStyles = styled.footer`
-  padding: 2rem;
+  padding: 3rem 15%;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--blue-light);
