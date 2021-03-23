@@ -6,6 +6,11 @@ const FooterStyles = styled.footer`
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--blue-light);
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 interface FooterProps {}

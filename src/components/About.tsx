@@ -15,6 +15,15 @@ const PageStyles = styled.section`
     width: 33%;
     margin-bottom: 2rem;
 
+    @media (max-width: 900px) {
+      width: 20%;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      width: 33%;
+    }
+
     &:hover .tool-name {
       display: flex;
     }
@@ -26,22 +35,34 @@ const PageStyles = styled.section`
     background-repeat: no-repeat;
     width: 100%;
     display: flex;
+    background-position: center;
 
     &:hover {
       cursor: pointer;
     }
   }
   .text {
-    width: 65%;
+    flex: 1;
   }
   .icons {
-    width: 25%;
+    width: 27.5rem;
     ${flexCenter};
     flex-wrap: wrap;
+    margin-left: 3rem;
+
+    @media (max-width: 900px) {
+      margin: 0;
+      margin-top: 5rem;
+      width: 100%;
+    }
   }
   .content {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
   }
   .tool-name {
     background-color: var(--pink-base);
@@ -83,6 +104,7 @@ const About = () => {
         about<span className="yellow">.</span>
         <span className="cyan">me</span>
       </h2>
+      text
       <div className="content">
         <div className="text">
           <p>

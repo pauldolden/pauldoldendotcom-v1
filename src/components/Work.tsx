@@ -23,6 +23,11 @@ const PageStyles = styled.section`
     .project-wrapper {
       width: 50%;
       padding-right: 1rem;
+
+      @media (max-width: 1000px) {
+        width: 100%;
+        padding-right: 1rem;
+      }
     }
 
     article {
@@ -30,6 +35,10 @@ const PageStyles = styled.section`
       width: 100%;
       padding: 2rem;
       height: 30rem;
+
+      @media (max-width: 1000px) {
+        height: initial;
+      }
 
       h4 {
         padding-top: 1rem;

@@ -15,6 +15,10 @@ const PageWrapper = styled.section`
     padding: 3rem 15%;
     padding-bottom: 6rem;
     flex: 1;
+
+    @media (max-width: 1200px) {
+      padding: 3rem 5%;
+    }
   }
 `;
 

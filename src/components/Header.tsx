@@ -12,10 +12,26 @@ const PageStyles = styled.section`
     padding: 3rem 15%;
     color: var(--pink-base);
 
+    @media (max-width: 1200px) {
+      padding: 3rem 5%;
+    }
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+
     h1 {
       font-family: "Anaheim";
       font-weight: 700;
       font-size: 4rem;
+
+      @media (max-width: 900px) {
+        padding-bottom: 2rem;
+      }
+
+      @media (max-width: 479px) {
+        font-size: 3.6rem;
+      }
     }
     nav {
       ${flexCenter};
@@ -27,6 +43,20 @@ const PageStyles = styled.section`
         li {
           padding: 1rem;
           transition: 0.3s all;
+        }
+
+        a {
+          @media (max-width: 900px) {
+            font-size: 2.4rem;
+          }
+
+          @media (max-width: 650px) {
+            font-size: 2.2rem;
+          }
+
+          @media (max-width: 479px) {
+            font-size: 2rem;
+          }
         }
         a:hover {
           color: var(--cyan-base);
