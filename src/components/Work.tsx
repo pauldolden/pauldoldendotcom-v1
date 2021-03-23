@@ -67,7 +67,7 @@ const Work = () => {
   const projMap = projects.map((project) => {
     return (
       <div className="project-wrapper">
-        <article>
+        <article key={project.name}>
           <a href={project.url}>{project.name}</a>
           <h4>Completed: </h4>
           <div>{project.completed}</div>
@@ -78,7 +78,7 @@ const Work = () => {
           <h4>Tech Stack:</h4>
           <div>
             {project.stack.map((item) => (
-              <span>{item}</span>
+              <span key={item}>{item}</span>
             ))}
           </div>
         </article>

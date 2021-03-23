@@ -43,6 +43,10 @@ const PageStyles = styled.section`
         li {
           padding: 1rem;
           transition: 0.3s all;
+
+          @media (max-width: 600px) {
+            padding: 5px;
+          }
         }
 
         a {
@@ -56,6 +60,10 @@ const PageStyles = styled.section`
 
           @media (max-width: 479px) {
             font-size: 2rem;
+          }
+
+          @media (max-width: 400px) {
+            font-size: 1.6rem;
           }
         }
         a:hover {
