@@ -10,6 +10,7 @@ const FooterStyles = styled.footer`
   @media (max-width: 1000px) {
     flex-direction: column;
     align-items: center;
+    padding: 3rem 0;
   }
 `;
 
