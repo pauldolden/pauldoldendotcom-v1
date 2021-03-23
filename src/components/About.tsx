@@ -74,7 +74,7 @@ const PageStyles = styled.section`
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 10rem;
+    right: 6.5rem;
     display: none;
     z-index: 10;
     text-align: center;
