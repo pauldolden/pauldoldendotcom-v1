@@ -36,6 +36,7 @@ const PageStyles = styled.section`
     width: 100%;
     display: flex;
     background-position: center;
+    user-select: none;
 
     &:hover {
       cursor: pointer;
