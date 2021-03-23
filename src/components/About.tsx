@@ -7,6 +7,20 @@ import theme from "../styles/theme";
 const PageStyles = styled.section`
   padding: 3rem 0;
 
+  .over-there {
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  .down-there {
+    display: none;
+
+    @media (max-width: 900px) {
+      display: inline;
+    }
+  }
+
   .tool-container {
     position: relative;
     ${flexCenter};
@@ -112,7 +126,9 @@ const About = () => {
             Essex, UK. I currently work for 2Dmedia, in Witham, Essex building
             custom E-Commerce sites. I like JavaScript, The JAMStack and open
             source. I enjoy dabbling with all manner of tech, but I mostly build
-            websites with these tools... (those ones, over there) 👉.
+            websites with these tools...{" "}
+            <span className="over-there">(those ones, over there) 👉. </span>
+            <span className="down-there">(those ones, down there) 👇.</span>
           </p>
           <p>
             On the rare occasions that I'm not writing code, I'm usually
