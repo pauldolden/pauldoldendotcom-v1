@@ -24,6 +24,7 @@ const PageWrapper = styled.section`
 
 interface LayoutProps {
   children: React.ReactNode;
+  title: String;
 }
 
 const Layout: React.FC<LayoutProps> = (props) => {

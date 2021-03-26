@@ -6,7 +6,7 @@ import Writing from "../components/Writing";
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout title="Home">
       <About />
       <Work />
       <Writing />

@@ -7,7 +7,7 @@ const PageStyles = styled.section``;
 
 const work = () => {
   return (
-    <Layout>
+    <Layout title="Work">
       <PageStyles>
         <Work />
       </PageStyles>
