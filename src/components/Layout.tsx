@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
   return (
     <>
       <GlobalStyles />
-      <Head />
+      <Head title={props.title} />
       <PageWrapper>
         <Header />
         <main>{props.children}</main>

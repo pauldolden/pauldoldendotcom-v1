@@ -7,7 +7,7 @@ const PageStyles = styled.section``;
 
 const about = () => {
   return (
-    <Layout>
+    <Layout title="About">
       <PageStyles>
         <About />
       </PageStyles>
