@@ -9,9 +9,10 @@ const Head: React.FC<HeadProps> = (props) => {
   return (
     <Helmet>
       <title>dolden.dev | {props.title} </title>
-      <meta name="description">
-        Paul Dolden: A Full-Stack Web Developer in Essex, UK
-      </meta>
+      <meta
+        name="description"
+        content="Paul Dolden: A Full-Stack Web Developer in Essex, UK"
+      ></meta>
       <link rel="preconnect" href="https://fonts.gstatic.com"></link>
       <link
         href="https://fonts.googleapis.com/css2?family=Anaheim&family=DotGothic16&family=Source+Code+Pro:wght@200;300;400;500;600;700;900&display=swap"
