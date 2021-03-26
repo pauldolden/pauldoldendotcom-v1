@@ -23,6 +23,8 @@ const PageStyles = styled.section`
     .project-wrapper {
       width: 50%;
       padding-right: 1rem;
+      display: flex;
+      align-items: center;
 
       @media (max-width: 1000px) {
         width: 100%;
@@ -35,6 +37,9 @@ const PageStyles = styled.section`
       width: 100%;
       padding: 2rem;
       height: 30rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       @media (max-width: 1000px) {
         height: initial;
@@ -68,7 +73,9 @@ const Work = () => {
     return (
       <div className="project-wrapper">
         <article key={project.name}>
-          <a href={project.url}>{project.name}</a>
+          <a href={project.url}>
+            <h3>{project.name}</h3>
+          </a>
           <h4>Completed: </h4>
           <div>{project.completed}</div>
           <div>
