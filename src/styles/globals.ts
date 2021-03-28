@@ -9,7 +9,7 @@ export default createGlobalStyle`
         --purple-base: #8100B2;
         --yellow-base: #FFD237;
         --cyan-base: #00F5FE;
-        --white-base: #fff;
+        --white-base: #ffffff;
     }
 
     * {
