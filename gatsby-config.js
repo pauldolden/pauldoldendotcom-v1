@@ -1,32 +1,32 @@
 module.exports = {
   siteMetadata: {
-    title: "dolden-dev",
+    title: 'dolden-dev',
+    author: 'Paul Dolden',
+    description: 'Full Stack Web/Mobile Developer',
   },
   plugins: [
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "posts",
-        path: `${__dirname}/src/posts/`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-page-creator",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/posts`,
+        name: 'post',
       },
     },
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        defaultLayouts: {
-          default: require.resolve("./src/templates/post.tsx"),
-        },
+        root: __dirname,
       },
     },
-
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-preload-fonts",
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: 'http://localhost:8000/___graphql',
+      },
+    },
+    `gatsby-plugin-graphql-codegen`,
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-preload-fonts',
   ],
 };

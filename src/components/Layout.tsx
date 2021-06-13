@@ -28,10 +28,12 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = (props) => {
+  const title = props.title ? props.title : "Post";
+
   return (
     <>
       <GlobalStyles />
-      <Head title={props.title} />
+      <Head title={title} />
       <PageWrapper>
         <Header />
         <main>{props.children}</main>

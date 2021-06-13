@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import { PostList } from './PostList';
 
 const PageStyles = styled.section`
   padding: 3rem 0;
@@ -19,6 +20,7 @@ const Writing = () => {
           riddled takes on my life and code below.
         </div>
       </div>
+      <PostList />
     </PageStyles>
   );
 };

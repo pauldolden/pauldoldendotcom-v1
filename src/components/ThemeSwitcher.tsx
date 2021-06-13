@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { flexCenterCenter } from "../styles/globals";
-import theme from "../styles/theme";
+import React from 'react';
+import styled from 'styled-components';
+import { flexCenterCenter } from '../styles/globals';
+import theme from '../styles/theme';
 
 export const ComponentStyles = styled.div`
   ${flexCenterCenter};
@@ -55,7 +55,7 @@ export const Switcher = styled.label`
   }
 `;
 
-const ThemeSwitcher = ({ setTheme }) => {
+const ThemeSwitcher = ({ setTheme }: any) => {
   return (
     <ComponentStyles>
       <svg

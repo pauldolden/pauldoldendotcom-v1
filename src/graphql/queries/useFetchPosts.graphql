@@ -1,0 +1,16 @@
+query fetchPostsData {
+  allMdx {
+    edges {
+      node {
+        slug
+        frontmatter {
+          title
+          category
+          date
+          id
+        }
+        timeToRead
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
@@ -40,6 +40,9 @@ export default createGlobalStyle`
     p {
         margin-bottom: 2rem;
     }
+    h1 {
+        font-size: 3.6rem;
+    }
 
     h2 {
         color:var(--pink-base);
@@ -64,9 +67,43 @@ export default createGlobalStyle`
     p:last-child {
         margin-bottom: 0;
     }
+
+    article {
+      background-color: var(--blue-light);
+      width: 100%;
+      padding: 2rem;
+      height: 30rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (max-width: 1000px) {
+        height: initial;
+      }
+
+      h4 {
+        padding-top: 1rem;
+      }
+
+      a {
+        color: var(--pink-base);
+        font-weight: 700;
+
+        &:hover {
+          color: var(--cyan-base);
+        }
+      }
+
+      span::after {
+        content: ", ";
+      }
+      span:last-child::after {
+        content: ".";
+      }
+    }
 `;
 
-export const flexCenter = "display:flex;align-items:center;";
+export const flexCenter = 'display:flex;align-items:center;';
 
 export const flexCenterCenter =
-  "display:flex;align-items:center;justify-content:center;";
+  'display:flex;align-items:center;justify-content:center;';
