@@ -1,12 +1,12 @@
+import { PostList } from './PostList';
 import React from 'react';
 import styled from 'styled-components';
-import { PostList } from './PostList';
 
 const PageStyles = styled.section`
   padding: 3rem 0;
 `;
 
-const Writing = () => {
+const Writing = (): JSX.Element => {
   return (
     <PageStyles>
       <h2>
@@ -16,8 +16,8 @@ const Writing = () => {
       <div className="content">
         <div className="text">
           Prior to persuing a career in code, I was a subpar Creative Writing
-          student, so you'll occationally find me posting verbose and adverb
-          riddled takes on my life and code below.
+          student, so you&apos;ll occationally find me posting verbose and
+          adverb riddled takes on my life and code below.
         </div>
       </div>
       <PostList />

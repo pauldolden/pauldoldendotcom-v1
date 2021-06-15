@@ -1,24 +1,17 @@
+import { Project as ProjectInterface } from '../types/Project';
 import React from 'react';
 import styled from 'styled-components';
-import { Project as ProjectInterface } from '../types/Project';
 
 interface Props {
   project: ProjectInterface;
 }
 
 const Wrapper = styled.div`
-  width: 50%;
-  padding-right: 1rem;
   display: flex;
   align-items: center;
-
-  @media (max-width: 1000px) {
-    width: 100%;
-    padding-right: 1rem;
-  }
 `;
 
-export const Project = ({ project }: Props) => {
+export const Project = ({ project }: Props): JSX.Element => {
   return (
     <Wrapper>
       <article key={project.name}>
@@ -33,7 +26,7 @@ export const Project = ({ project }: Props) => {
         </div>
         <h4>Tech Stack:</h4>
         <div>
-          {project.stack.map((item: any) => (
+          {project.stack.map((item: string) => (
             <span key={item}>{item}</span>
           ))}
         </div>

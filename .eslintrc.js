@@ -19,7 +19,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'sort-imports': [
-      'error',
+      'warning',
       {
         ignoreCase: false,
         ignoreDeclarationSort: false,

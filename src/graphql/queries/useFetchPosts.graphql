@@ -3,13 +3,20 @@ query fetchPostsData {
     edges {
       node {
         slug
+        body
+        timeToRead
         frontmatter {
           title
           category
           date
           id
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          summary
         }
-        timeToRead
       }
     }
   }

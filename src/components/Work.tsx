@@ -8,17 +8,6 @@ const PageStyles = styled.section`
   .content {
     display: flex;
     flex-direction: column;
-
-    .projects {
-      padding-top: 2rem;
-      flex-wrap: wrap;
-      display: flex;
-      margin: 0 -1rem -1rem 0;
-
-      & > * {
-        padding: 0 1rem 1rem 0;
-      }
-    }
   }
 `;
 

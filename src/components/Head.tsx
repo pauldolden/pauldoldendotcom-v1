@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 interface HeadProps {
-  title: String;
+  title: string;
 }
 
 const Head: React.FC<HeadProps> = (props) => {

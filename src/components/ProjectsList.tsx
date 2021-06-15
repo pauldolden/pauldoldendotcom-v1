@@ -1,10 +1,11 @@
+import { Grid } from '../styles/globals';
+import { Project } from './Project';
 import React from 'react';
 import { projects } from '../utils/projects';
-import { Project } from './Project';
 
 export const ProjectsList = () => {
   const renderedProjects = projects.map((project) => {
-    return <Project project={project} />;
+    return <Project key={project.name} project={project} />;
   });
-  return <div>{renderedProjects}</div>;
+  return <Grid>{renderedProjects}</Grid>;
 };

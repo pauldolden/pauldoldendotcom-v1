@@ -1,11 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { useFetchPostsDataQuery } from '../generated/graphqlTypes';
+import { Grid } from '../styles/globals';
 import { Post } from './Post';
-
-const PostListStyles = styled.article`
-  margin-top: 2rem;
-`;
 
 export const PostList = () => {
   const { data } = useFetchPostsDataQuery();
@@ -15,5 +11,5 @@ export const PostList = () => {
     return <Post key={post.node.slug!} data={post.node} />;
   });
 
-  return <PostListStyles>{renderedPosts}</PostListStyles>;
+  return <Grid>{renderedPosts}</Grid>;
 };

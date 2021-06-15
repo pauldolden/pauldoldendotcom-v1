@@ -4,8 +4,7 @@ export const projects: Project[] = [
   {
     name: 'Remembering Rudy & Aurora',
     url: 'https://rudyandaurora.com',
-    desc:
-      'A baby loss awareness blog, built with 🧡 for my wife and my 👼 girls.',
+    desc: 'A baby loss awareness blog, built with 🧡 for my wife and my 👼 girls.',
     stack: [
       'React',
       'Gatsby',

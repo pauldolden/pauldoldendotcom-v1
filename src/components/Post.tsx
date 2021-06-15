@@ -1,22 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Mdx, Maybe, MdxFrontmatter } from '../generated/graphqlTypes';
+import { Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { PostNode } from '../types/PostNode';
 
-const PostStyles = styled.article``;
-
-type Node = { __typename?: 'Mdx' } & Pick<Mdx, 'slug' | 'timeToRead'> & {
-    frontmatter?: Maybe<
-      { __typename?: 'MdxFrontmatter' } & Pick<
-        MdxFrontmatter,
-        'title' | 'category' | 'date' | 'id'
-      >
-    >;
-  };
+const PostStyles = styled.article`
+  .imageWrapper {
+    margin-bottom: 2rem;
+  }
+`;
 
 interface Props {
-  data: Node;
+  data: PostNode;
 }
 
 export const Post = ({ data }: Props) => {
-  return <PostStyles>{data.frontmatter?.title}</PostStyles>;
+  return (
+    <Link to={`/posts/${data.slug}`}>
+      <PostStyles>
+        {data.frontmatter?.image && (
+          <div className="imageWrapper">
+            <GatsbyImage
+              image={data.frontmatter?.image.childImageSharp?.gatsbyImageData}
+              alt={data.frontmatter.title}
+            />
+          </div>
+        )}
+        <div>
+          <h3>{data.frontmatter?.title}</h3>
+          <p>{data.frontmatter?.date}</p>
+          <p>{data.frontmatter?.summary}</p>
+          <p>{data.timeToRead} minute read.</p>
+          <p>Category: {data.frontmatter?.category}</p>
+        </div>
+      </PostStyles>
+    </Link>
+  );
 };

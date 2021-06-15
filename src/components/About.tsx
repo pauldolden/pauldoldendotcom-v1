@@ -1,8 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { tools } from "../images/icons";
-import { flexCenter, flexCenterCenter } from "../styles/globals";
-import theme from "../styles/theme";
+import React from 'react';
+import styled from 'styled-components';
+import { tools } from '../images/svg/icons';
+import { flexCenter, flexCenterCenter } from '../styles/globals';
 
 const PageStyles = styled.section`
   padding: 3rem 0;
@@ -122,11 +121,12 @@ const About = () => {
       <div className="content">
         <div className="text">
           <p>
-            Hey 👋! My name is Paul Dolden, I'm a full-stack developer from
-            Essex, UK. I currently work for 2Dmedia, in Witham, Essex building
-            custom E-Commerce sites. I like JavaScript, The JAMStack and open
+            Hey 👋! My name is Paul Dolden, I'm a full-stack web/mobile
+            developer from Essex, UK. I currently work for 2Dmedia, in Witham,
+            Essex building custom E-Commerce sites and more recently, React
+            Native applications. I like JavaScript, The JAMStack and open
             source. I enjoy dabbling with all manner of tech, but I mostly build
-            websites with these tools...{" "}
+            websites and mobile apps with these tools...{' '}
             <span className="over-there">(those ones, over there) 👉. </span>
             <span className="down-there">(those ones, down there) 👇.</span>
           </p>
@@ -138,24 +138,24 @@ const About = () => {
             🐕.
           </p>
           <p>
-            You can find me sometimes almost tweeting on{" "}
+            You can find me sometimes almost tweeting on{' '}
             <a
               href="https://twitter.com/pauldolden"
-              style={{ color: "#00ACEE" }}
+              style={{ color: '#00ACEE' }}
             >
               twitter
             </a>
-            , forgetting to push to{" "}
+            , forgetting to push to{' '}
             <a
               href="https://github.com/pauldolden"
-              style={{ color: "#8f3e9d" }}
+              style={{ color: '#8f3e9d' }}
             >
               github
-            </a>{" "}
-            or passively trying to make friends on{" "}
+            </a>{' '}
+            or passively trying to make friends on{' '}
             <a
               href="https://www.linkedin.com/in/paul-dolden-2ba7a9142/"
-              style={{ color: "#2766c2" }}
+              style={{ color: '#2766c2' }}
             >
               linkedin
             </a>

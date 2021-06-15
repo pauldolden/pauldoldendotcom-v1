@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
@@ -43,11 +43,14 @@ export default createGlobalStyle`
     h1 {
         font-size: 3.6rem;
     }
-
+    
     h2 {
         color:var(--pink-base);
         font-size: 3.6rem;
         padding-bottom: 2rem;
+    }
+    h3 {
+      color:var(--pink-base)
     }
     .content {
         display: flex;
@@ -72,7 +75,6 @@ export default createGlobalStyle`
       background-color: var(--blue-light);
       width: 100%;
       padding: 2rem;
-      height: 30rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -101,6 +103,17 @@ export default createGlobalStyle`
         content: ".";
       }
     }
+`;
+
+export const Grid = styled.section`
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1rem;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: auto;
+  }
 `;
 
 export const flexCenter = 'display:flex;align-items:center;';
