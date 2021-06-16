@@ -39,4 +39,7 @@ module.exports = {
       },
     },
   ],
+  flags: {
+    FAST_DEV: false,
+  },
 };
