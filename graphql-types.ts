@@ -260,7 +260,6 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
-  flags?: Maybe<SiteFlags>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -275,10 +274,6 @@ export type SiteBuildTimeArgs = {
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
-};
-
-export type SiteFlags = {
-  FAST_DEV?: Maybe<Scalars['Boolean']>;
 };
 
 export type SiteSiteMetadata = {
@@ -672,7 +667,6 @@ export type SitePluginPluginOptions = {
   extensions?: Maybe<Array<Maybe<Scalars['String']>>>;
   lessBabel?: Maybe<Scalars['Boolean']>;
   mediaTypes?: Maybe<Array<Maybe<Scalars['String']>>>;
-  uri?: Maybe<Scalars['String']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
   allExtensions?: Maybe<Scalars['Boolean']>;
   isTSX?: Maybe<Scalars['Boolean']>;
@@ -853,7 +847,6 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  flags?: Maybe<SiteFlagsFilterInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2003,10 +1996,6 @@ export type SiteSiteMetadataFilterInput = {
   author?: Maybe<StringQueryOperatorInput>;
 };
 
-export type SiteFlagsFilterInput = {
-  FAST_DEV?: Maybe<BooleanQueryOperatorInput>;
-};
-
 export type SiteConnection = {
   totalCount: Scalars['Int'];
   edges: Array<SiteEdge>;
@@ -2059,7 +2048,6 @@ export type SiteFieldsEnum =
   | 'siteMetadata___author'
   | 'port'
   | 'host'
-  | 'flags___FAST_DEV'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -2163,7 +2151,6 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  flags?: Maybe<SiteFlagsFilterInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2382,7 +2369,6 @@ export type SitePluginPluginOptionsFilterInput = {
   extensions?: Maybe<StringQueryOperatorInput>;
   lessBabel?: Maybe<BooleanQueryOperatorInput>;
   mediaTypes?: Maybe<StringQueryOperatorInput>;
-  uri?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
   allExtensions?: Maybe<BooleanQueryOperatorInput>;
   isTSX?: Maybe<BooleanQueryOperatorInput>;
@@ -2625,7 +2611,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___extensions'
   | 'pluginCreator___pluginOptions___lessBabel'
   | 'pluginCreator___pluginOptions___mediaTypes'
-  | 'pluginCreator___pluginOptions___uri'
   | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___pluginOptions___allExtensions'
   | 'pluginCreator___pluginOptions___isTSX'
@@ -3260,7 +3245,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___extensions'
   | 'pluginOptions___lessBabel'
   | 'pluginOptions___mediaTypes'
-  | 'pluginOptions___uri'
   | 'pluginOptions___pathCheck'
   | 'pluginOptions___allExtensions'
   | 'pluginOptions___isTSX'
@@ -3455,6 +3439,17 @@ export type SiteBuildMetadataSortInput = {
   fields?: Maybe<Array<Maybe<SiteBuildMetadataFieldsEnum>>>;
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
+
+export type FetchPostsDataQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FetchPostsDataQuery = { allMdx: { edges: Array<{ node: (
+        Pick<Mdx, 'slug' | 'body' | 'timeToRead'>
+        & { frontmatter?: Maybe<(
+          Pick<MdxFrontmatter, 'title' | 'category' | 'date' | 'id' | 'summary'>
+          & { image?: Maybe<{ childImageSharp?: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> }
+        )> }
+      ) }> } };
 
 export type PostQueryQueryVariables = Exact<{
   id?: Maybe<Scalars['String']>;
