@@ -5,7 +5,6 @@ module.exports = {
     description: 'Full Stack Web/Mobile Developer',
   },
   plugins: [
-    `gatsby-plugin-graphql-codegen`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-preload-fonts`,
@@ -30,6 +29,14 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         root: __dirname,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Rubik', 'Rubik'],
+        },
       },
     },
   ],

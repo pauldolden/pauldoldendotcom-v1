@@ -2,14 +2,21 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
+@font-face {
+  font-family: "fathur";
+  src: url("/fonts/fathur.ttf") format("truetype");
+}
+
+
     :root {
         --blue-light: #1B273B;
-        --blue-base: #010D21;
+        --blue-base: #00001E;
         --pink-base: #ED017B;
         --purple-base: #8100B2;
         --yellow-base: #FFD237;
         --cyan-base: #00F5FE;
         --white-base: #ffffff;
+        --font-logo: 'Fathur'
     }
 
     * {
@@ -17,7 +24,7 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         text-decoration: none;
-        list-style: none;
+        list-style-position: inside;
     }
 
     html {
@@ -26,8 +33,8 @@ export default createGlobalStyle`
     
     body {
         font-size: 2rem;
-        font-family: 'Anaheim';
-        background-color: var(--blue-base);
+        font-family: 'Rubik';
+        background-image: url("/svg/blob.svg");
         color: var(--white-base);
         font-weight: 500;
     }
@@ -102,6 +109,14 @@ export default createGlobalStyle`
       span:last-child::after {
         content: ".";
       }
+    }
+    ol li {
+      padding-bottom: 1rem;
+    }
+
+    ol li::marker {
+      font-weight: 700;
+      color: var(--pink-base)
     }
 `;
 

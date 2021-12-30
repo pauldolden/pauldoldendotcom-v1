@@ -1,14 +1,44 @@
-import { Link } from "gatsby";
-import React from "react";
-import styled from "styled-components";
-import { flexCenter } from "../styles/globals";
-import ThemeSwitcher from "./ThemeSwitcher";
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
+import { flexCenter } from '../styles/globals';
+import { FiTwitter, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+import { GradientIcon } from './GradientIcon';
+
+const BASE_DELAY = 0.2;
+
+const social = [
+  {
+    name: 'twitter',
+    icon: <FiTwitter size={30} />,
+    link: 'https://twitter.com/pauldolden',
+    delay: BASE_DELAY + 1.5,
+  },
+  {
+    name: 'github',
+    icon: <FiGithub size={30} />,
+    link: 'https://github.com/pauldolden',
+    delay: BASE_DELAY + 1,
+  },
+  {
+    name: 'linkedin',
+    icon: <FiLinkedin size={30} />,
+    link: 'https://linkedin.com/in/pauldolden',
+    delay: BASE_DELAY + 0.5,
+  },
+  // {
+  //   name: "email",
+  //   icon: <FiMail size={35} />,
+  //   link: "mailto:paul@dolden.dev",
+  //   delay: BASE_DELAY,
+  // },
+];
 
 const PageStyles = styled.section`
   header {
     ${flexCenter};
     justify-content: space-between;
-    border-bottom: 1px solid var(--blue-light);
     padding: 3rem 15%;
     color: var(--pink-base);
 
@@ -21,7 +51,7 @@ const PageStyles = styled.section`
     }
 
     h1 {
-      font-family: "Anaheim";
+      font-family: 'Fathur';
       font-weight: 700;
       font-size: 4rem;
 
@@ -35,50 +65,31 @@ const PageStyles = styled.section`
     }
     nav {
       ${flexCenter};
-      font-family: "Source Code Pro";
 
-      ul {
-        display: flex;
-
-        li {
-          padding: 1rem;
-          transition: 0.3s all;
-
-          @media (max-width: 600px) {
-            padding: 5px;
-          }
+      a {
+        padding-right: 1rem;
+        @media (max-width: 900px) {
+          font-size: 2.4rem;
         }
 
-        a {
-          @media (max-width: 900px) {
-            font-size: 2.4rem;
-          }
-
-          @media (max-width: 650px) {
-            font-size: 2.2rem;
-          }
-
-          @media (max-width: 479px) {
-            font-size: 2rem;
-          }
-
-          @media (max-width: 400px) {
-            font-size: 1.6rem;
-          }
+        @media (max-width: 650px) {
+          font-size: 2.2rem;
         }
-        a:hover {
-          color: var(--cyan-base);
-          font-weight: 700;
 
-          span {
-            color: var(--pink-base);
-          }
+        @media (max-width: 479px) {
+          font-size: 2rem;
         }
-        li:first-child {
-          padding-left: 0;
+
+        @media (max-width: 400px) {
+          font-size: 1.6rem;
         }
-        li:last-child {
-          padding-right: 0;
+      }
+      a:hover {
+        color: var(--cyan-base);
+        font-weight: 700;
+
+        span {
+          color: var(--pink-base);
         }
       }
     }
@@ -90,33 +101,35 @@ const Header = () => {
     <PageStyles>
       <header>
         <h1>
-          👨‍💻 dolden<span className="yellow">.</span>
+          dolden<span className="yellow">.</span>
           <span className="cyan">dev</span>
         </h1>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">
-                home<span className="yellow">()</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/about">
-                about<span className="yellow">()</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/work">
-                work<span className="yellow">()</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/writing">
-                writing<span className="yellow">()</span>
-              </Link>
-            </li>
-          </ul>
+          <Link to="/">home</Link>
+          <Link to="/about">about</Link>
+          <Link to="/work">work</Link>
+          <Link to="/writing">writing</Link>
         </nav>
+        <div>
+          {social.map((item) => (
+            <a href={item.link} key={item.link} target="_blank">
+              <motion.div
+                animate={{ x: [-200, 0], opacity: [0, 1] }}
+                transition={{
+                  delay: item.delay,
+                  default: { duration: 0.2 },
+                }}
+              >
+                <GradientIcon
+                  name={item.name}
+                  icon={item.icon}
+                  from="#D70277"
+                  to="#55FFFF"
+                />
+              </motion.div>
+            </a>
+          ))}
+        </div>
       </header>
     </PageStyles>
   );
